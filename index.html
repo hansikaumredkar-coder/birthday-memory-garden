@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Moonlight ✨</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section id="lockScreen" class="panel">
+      <p class="eyebrow">A little place made just for you</p>
+      <h1>Welcome, Moonlight ✨</h1>
+      <p>Enter the secret date to open your birthday journal.</p>
+
+      <form id="unlockForm">
+        <input
+          id="passwordInput"
+          type="password"
+          placeholder="Secret password"
+          autocomplete="off"
+          required
+        >
+        <button type="submit">Open my journal</button>
+      </form>
+      <p id="passwordMessage" class="message" aria-live="polite"></p>
+    </section>
+
+    <section id="journal" class="hidden">
+      <header class="hero panel">
+        <p class="eyebrow">A birthday journal</p>
+        <h1>Happy Birthday, Moonlight! 🎂</h1>
+        <p>Made with love, little memories, and a whole lot of pastel magic.</p>
+      </header>
+
+      <nav class="nav-buttons" aria-label="Journal sections">
+        <button data-section="memories">Our memories</button>
+        <button data-section="wishes">Birthday wishes</button>
+        <button data-section="letter">A little letter</button>
+        <button data-section="quiz">Mini quiz</button>
+        <button data-section="surprise">Final surprise</button>
+      </nav>
+
+      <section id="contentPanel" class="panel content-panel" aria-live="polite">
+        <h2>Choose a little chapter 💌</h2>
+        <p>Tap one of the buttons above to open it.</p>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

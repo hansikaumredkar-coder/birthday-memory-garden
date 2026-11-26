@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
 
 :root {
-  --ink: #49365f;
-  --muted: #79658e;
-  --pink: #ffb8d2;
-  --lavender: #cbbaff;
-  --blue: #a9dcff;
-  --yellow: #ffe18a;
-  --mint: #a9ecd4;
-  --peach: #ffc9a8;
+  --ink: #241044;
+  --pink: #ff3f9b;
+  --purple: #7938ff;
+  --cyan: #00d9e8;
+  --yellow: #ffe600;
+  --orange: #ff7a24;
+  --green: #36e58c;
+  --white: #fffdf8;
 }
 
 * {
@@ -22,11 +22,11 @@ body {
   color: var(--ink);
   font-family: 'DM Sans', sans-serif;
   background:
-    radial-gradient(circle at 8% 12%, #ffb8d2 0, transparent 25%),
-    radial-gradient(circle at 92% 12%, #a9dcff 0, transparent 27%),
-    radial-gradient(circle at 10% 90%, #ffe18a 0, transparent 25%),
-    radial-gradient(circle at 90% 85%, #a9ecd4 0, transparent 27%),
-    linear-gradient(135deg, #fff3fa, #f5efff 48%, #eefaff);
+    radial-gradient(circle at 8% 10%, #ff3f9b 0 10%, transparent 28%),
+    radial-gradient(circle at 92% 12%, #00d9e8 0 10%, transparent 28%),
+    radial-gradient(circle at 8% 90%, #ffe600 0 10%, transparent 28%),
+    radial-gradient(circle at 92% 90%, #36e58c 0 10%, transparent 28%),
+    #7938ff;
   background-attachment: fixed;
 }
 
@@ -36,30 +36,31 @@ input {
 }
 
 button {
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  border-radius: 999px;
-  padding: 12px 20px;
-  color: #49365f;
-  font-weight: 700;
-  background: linear-gradient(135deg, #ffd0e3, #d9ceff);
-  box-shadow: 0 7px 0 rgba(115, 82, 151, 0.12);
+  padding: 13px 21px;
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  color: var(--ink);
+  font-weight: 800;
+  background: var(--yellow);
+  box-shadow: 5px 5px 0 var(--ink);
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 button:hover {
-  transform: translateY(-3px) rotate(-1deg);
-  box-shadow: 0 10px 18px rgba(115, 82, 151, 0.18);
+  transform: translate(3px, 3px);
+  box-shadow: 2px 2px 0 var(--ink);
 }
 
 button:active {
-  transform: translateY(0);
+  transform: translate(5px, 5px);
+  box-shadow: none;
 }
 
 button:focus-visible,
 input:focus-visible {
-  outline: 3px solid #9c7be8;
-  outline-offset: 3px;
+  outline: 3px solid white;
+  outline-offset: 4px;
 }
 
 .page {
@@ -68,48 +69,34 @@ input:focus-visible {
 }
 
 .panel {
-  position: relative;
-  overflow: hidden;
   padding: clamp(24px, 5vw, 46px);
-  border: 2px solid rgba(255, 255, 255, 0.9);
-  border-radius: 32px;
-  background: rgba(255, 253, 255, 0.88);
-  box-shadow: 0 18px 45px rgba(105, 75, 142, 0.16);
+  border: 4px solid var(--ink);
+  border-radius: 28px;
+  background: var(--white);
+  box-shadow: 10px 10px 0 var(--ink);
   text-align: center;
-  backdrop-filter: blur(8px);
 }
 
 #lockScreen {
   width: min(570px, 100%);
-  margin: 8vh auto 0;
-  background: linear-gradient(145deg, #fff7fb, #f2edff 55%, #eaf8ff);
-}
-
-#lockScreen::before,
-#lockScreen::after {
-  position: absolute;
-  font-size: 2rem;
-  opacity: 0.8;
+  margin: 7vh auto 0;
+  background: var(--yellow);
+  position: relative;
 }
 
 #lockScreen::before {
-  content: "✦";
-  top: 20px;
-  left: 24px;
-  color: #f5a4c7;
-}
-
-#lockScreen::after {
-  content: "✧";
-  right: 24px;
-  bottom: 20px;
-  color: #9c85e5;
+  content: "✦ ✦ ✦";
+  display: block;
+  margin-bottom: 18px;
+  color: var(--pink);
+  font-size: 1.7rem;
+  letter-spacing: 12px;
 }
 
 .eyebrow {
-  color: #9a6eae;
+  color: var(--purple);
   font-size: 0.78rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
@@ -122,17 +109,15 @@ h2 {
 h1 {
   margin: 12px 0;
   font-size: clamp(2.2rem, 6vw, 3.7rem);
-  line-height: 1.15;
-  background: linear-gradient(90deg, #d85f9d, #8d6de0, #4d9fd2);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  line-height: 1.12;
+  color: var(--pink);
+  text-shadow: 3px 3px 0 var(--ink);
 }
 
 h2 {
   margin-top: 0;
+  color: var(--purple);
   font-size: clamp(1.7rem, 4vw, 2.4rem);
-  color: #805bb0;
 }
 
 p {
@@ -143,7 +128,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   margin-top: 26px;
 }
 
@@ -151,20 +136,25 @@ input {
   min-width: 0;
   flex: 1 1 200px;
   padding: 14px 18px;
-  border: 2px solid #e7d9f8;
-  border-radius: 999px;
+  border: 3px solid var(--ink);
+  border-radius: 14px;
   color: var(--ink);
-  background: #fff;
+  background: white;
 }
 
 input::placeholder {
-  color: #b3a2c4;
+  color: #8b7aa5;
+}
+
+#unlockForm button {
+  background: var(--pink);
+  color: white;
 }
 
 .message {
   min-height: 1.5em;
-  color: #c14e8b;
-  font-weight: 600;
+  color: #b0005c;
+  font-weight: 800;
 }
 
 .hidden {
@@ -172,49 +162,56 @@ input::placeholder {
 }
 
 .hero {
-  background:
-    radial-gradient(circle at 15% 20%, #ffe18a, transparent 22%),
-    radial-gradient(circle at 85% 15%, #ffb8d2, transparent 25%),
-    linear-gradient(135deg, #e7dcff, #d9f1ff 55%, #d9f8e9);
+  background: var(--cyan);
+}
+
+.hero h1 {
+  color: var(--purple);
+}
+
+.hero .eyebrow {
+  color: #a0005c;
 }
 
 .hero p:last-child {
   max-width: 600px;
   margin: 12px auto 0;
-  color: #6f5a8a;
+  font-weight: 600;
 }
 
 .nav-buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
-  margin: 24px 0;
+  gap: 14px;
+  margin: 28px 0;
 }
 
 .nav-buttons button:nth-child(1) {
-  background: linear-gradient(135deg, #ffb8d2, #ffd5e6);
+  background: var(--pink);
+  color: white;
 }
 
 .nav-buttons button:nth-child(2) {
-  background: linear-gradient(135deg, #ffe18a, #fff0bd);
+  background: var(--yellow);
 }
 
 .nav-buttons button:nth-child(3) {
-  background: linear-gradient(135deg, #cbbaff, #e4d9ff);
+  background: var(--cyan);
 }
 
 .nav-buttons button:nth-child(4) {
-  background: linear-gradient(135deg, #a9dcff, #d6efff);
+  background: var(--green);
 }
 
 .nav-buttons button:nth-child(5) {
-  background: linear-gradient(135deg, #a9ecd4, #d6f8e9);
+  background: var(--orange);
+  color: white;
 }
 
 .content-panel {
   min-height: 250px;
-  background: linear-gradient(145deg, #fffdfd, #fff7fc 50%, #f5f1ff);
+  background: #fffdf8;
 }
 
 .memory-grid {
@@ -226,16 +223,22 @@ input::placeholder {
 
 .memory-card {
   padding: 12px;
-  border: 2px solid white;
-  border-radius: 22px;
-  background: linear-gradient(145deg, #ffe2ed, #eee5ff);
-  box-shadow: 0 9px 20px rgba(120, 82, 150, 0.12);
-  transform: rotate(-1deg);
+  border: 4px solid var(--ink);
+  border-radius: 18px;
+  background: var(--pink);
+  box-shadow: 5px 5px 0 var(--ink);
 }
 
-.memory-card:nth-child(even) {
-  background: linear-gradient(145deg, #e0f4ff, #e0f8ed);
-  transform: rotate(1deg);
+.memory-card:nth-child(2) {
+  background: var(--cyan);
+}
+
+.memory-card:nth-child(3) {
+  background: var(--yellow);
+}
+
+.memory-card:nth-child(4) {
+  background: var(--green);
 }
 
 .memory-card img {
@@ -243,24 +246,24 @@ input::placeholder {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border: 3px solid white;
-  border-radius: 15px;
-  background: #f2eaf7;
+  border: 3px solid var(--ink);
+  border-radius: 12px;
+  background: white;
 }
 
 .memory-card p {
   margin: 10px 0 2px;
-  color: #6e568c;
+  color: var(--ink);
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .letter {
   padding: 26px;
-  border: 2px dashed #e5b4d1;
-  border-radius: 22px;
-  background: linear-gradient(135deg, #fff1f7, #fff8dc, #f1eaff);
-  color: #654c7e;
+  border: 4px dashed var(--pink);
+  border-radius: 20px;
+  background: #fff0a6;
+  color: var(--ink);
   text-align: left;
   white-space: pre-line;
 }
@@ -273,29 +276,38 @@ input::placeholder {
   margin: 22px 0;
 }
 
-.quiz-options button {
-  background: linear-gradient(135deg, #cbbaff, #bde7ff);
+.quiz-options button:nth-child(1) {
+  background: var(--pink);
+  color: white;
+}
+
+.quiz-options button:nth-child(2) {
+  background: var(--green);
+}
+
+.quiz-options button:nth-child(3) {
+  background: var(--cyan);
 }
 
 .feedback {
   min-height: 1.5em;
-  color: #a04f91;
-  font-weight: 700;
+  color: var(--purple);
+  font-weight: 800;
 }
 
 .surprise-note {
   padding: 24px;
-  border: 2px solid white;
-  border-radius: 24px;
-  background: linear-gradient(135deg, #ffd0e3, #d9ceff, #c8f4e2);
-  box-shadow: 0 10px 25px rgba(115, 82, 151, 0.12);
+  border: 4px solid var(--ink);
+  border-radius: 22px;
+  background: linear-gradient(135deg, var(--pink), var(--yellow), var(--cyan));
+  box-shadow: 6px 6px 0 var(--ink);
 }
 
 .surprise-note p:first-child {
-  color: #a14f91;
+  color: var(--purple);
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: 1.7rem;
+  font-weight: 800;
 }
 
 @media (max-width: 520px) {
@@ -304,7 +316,8 @@ input::placeholder {
   }
 
   .panel {
-    border-radius: 24px;
+    border-radius: 22px;
+    box-shadow: 6px 6px 0 var(--ink);
   }
 
   #unlockForm {

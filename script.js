@@ -34,19 +34,19 @@ function showSection(section) {
       <p>Some moments deserve their own tiny corner of the world.</p>
       <div class="memory-grid">
         <article class="memory-card">
-          <img src="assets/photos/photo1.jpg" alt="A special memory">
+          <img src="assets/photo1.jpg" alt="A special memory">
           <p>One of my favourite moments</p>
         </article>
         <article class="memory-card">
-          <img src="assets/photos/photo2.jpg" alt="A happy memory">
+          <img src="assets/photo2.jpg" alt="A happy memory">
           <p>A memory that makes me smile</p>
         </article>
         <article class="memory-card">
-          <img src="assets/photos/photo3.jpg" alt="A lovely memory">
+          <img src="assets/photo3.jpg" alt="A lovely memory">
           <p>A little piece of happiness</p>
         </article>
         <article class="memory-card">
-          <img src="assets/photos/photo4.jpg" alt="A treasured memory">
+          <img src="assets/photo4.jpg" alt="A treasured memory">
           <p>One to keep forever</p>
         </article>
       </div>
